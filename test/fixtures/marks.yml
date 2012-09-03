@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  exam: MyString
+  php: 1
+  ruby: 1
+  joomla: 1
+  drupal: 1
+  drupal: 1
+  wordpress: 1
+  total: 1
+  avarage_marks: 1.5
+  student: 
+
+two:
+  exam: MyString
+  php: 1
+  ruby: 1
+  joomla: 1
+  drupal: 1
+  drupal: 1
+  wordpress: 1
+  total: 1
+  avarage_marks: 1.5
+  student: 

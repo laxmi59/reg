@@ -1,0 +1,30 @@
+<%= form_for @student do |f| %>
+
+	<% if @student.errors.any? %>
+		<div id="error_explanation">
+		<h2><%= pluralize(@student.errors.count, "errors")%> prohibited this post from being saved:</h2>
+		<ul>
+		<% @student.errors.full_messages.each do |e| %>
+			<li><%= e %></li>
+		<% end %>
+		</ul>
+		</div>
+	<% end %>
+
+<div>
+	<b><%= f.label :first_name, "First Name" %></b></br>
+	<%= f.text_field :first_name %>
+</div>
+<div>
+	<b><%= f.label :last_name, "Last Name" %></b></br>
+	<%= f.text_field :last_name %>
+</div>
+<div>
+	<b><%= f.label :gender, "Gender" %></b></br>
+	<%= f.radio_button :gender, "male", :checked => true %> Male
+	<%= f.radio_button :gender, "female" %> Female
+</div>
+<div>
+	<%= f.submit %>
+</div>
+<% end %>

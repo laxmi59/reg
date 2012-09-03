@@ -1,0 +1,25 @@
+<div id="notice"><%= notice %></div>
+
+
+<%= link_to "Add new", new_student_path %>
+<h1>List of Students</h1>
+<table>
+<tr>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Gender</th>
+	<th>Action</th>
+</td>
+<% @students.each do |s| %>
+<tr>
+	<td><%= s.first_name %></td>
+	<td><%= s.last_name %></td>
+	<td><%= s.gender %></td>
+	<td>
+		<%= link_to "Show", s %>
+		<%= link_to "Edit", edit_student_path(s) %>
+		<%= link_to "Delete", s, :method => :delete, :data => {:confirm => "Are you sure?"} %>
+	</td>
+</td>
+<% end %>
+</table>
