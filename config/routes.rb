@@ -1,6 +1,8 @@
 Reg::Application.routes.draw do
   get "students/index"
   resources :students
+  match 'students/:id/active/' => 'students#stu_active', :as => :active 
+  match 'students/:id/inactive/' => 'students#stu_inactive', :as => :inactive
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -68,4 +68,22 @@ class StudentsController < ApplicationController
 	end  
   end
   
+  def stu_active
+  	@student = Student.active(params[:id])
+	
+	respond_to do |format|
+		format.html {redirect_to students_index_path, :notice => "Successfully Activated"}
+		format.json {head :no_content}		
+	end
+  end
+  
+  def stu_inactive
+  	@student = Student.deactivate(params[:id])
+	
+	respond_to do |format|
+		format.html {redirect_to students_index_path, :notice => "Successfully De-activate"}
+		format.json {head :no_content}
+	end
+  end
+  
 end
